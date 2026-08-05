@@ -20,7 +20,7 @@ More plugins and skills are added over time. Updating the marketplace (below) pu
 2. In Claude Code, add this marketplace and install the plugin:
 
    ```
-   /plugin marketplace add Stratodata/ras-skills
+   /plugin marketplace add stratodata-eu/ras-skills
    /plugin install ras@stratodata
    ```
 

@@ -4,7 +4,7 @@
   "owner": {
     "name": "Stratodata",
     "email": "martin@stratodata.eu",
-    "url": "https://github.com/Stratodata"
+    "url": "https://github.com/stratodata-eu"
   },
   "description": "Stratodata analytics skills for Claude — evidence-grounded RAS / BigQuery data analysis and reporting.",
   "plugins": [

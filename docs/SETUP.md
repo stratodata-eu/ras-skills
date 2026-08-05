@@ -4,7 +4,7 @@ How to install Stratodata's skills into your own Claude environment. One-time se
 
 ## 1. Accept the GitHub invitation
 
-Stratodata invites your GitHub account to the private `Stratodata/ras-skills` repository.
+Stratodata invites your GitHub account to the private `stratodata-eu/ras-skills` repository.
 You'll get an email, or find it at https://github.com/notifications. Accept it. If you don't have a
 GitHub account yet, create a free one at https://github.com/signup first and send Stratodata the
 username so they can invite it.
@@ -23,7 +23,7 @@ gh auth setup-git      # lets git (and Claude Code) reuse your GitHub login
 Verify access:
 
 ```bash
-git ls-remote https://github.com/Stratodata/ras-skills >/dev/null && echo "OK: access works"
+git ls-remote https://github.com/stratodata-eu/ras-skills >/dev/null && echo "OK: access works"
 ```
 
 If that prints `OK`, you're ready.
@@ -33,7 +33,7 @@ If that prints `OK`, you're ready.
 In Claude Code:
 
 ```
-/plugin marketplace add Stratodata/ras-skills
+/plugin marketplace add stratodata-eu/ras-skills
 /plugin install ras@stratodata
 ```
 

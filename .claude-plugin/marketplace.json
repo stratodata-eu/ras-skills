@@ -1,0 +1,18 @@
+{
+  "$schema": "https://json.schemastore.org/claude-code-marketplace.json",
+  "name": "stratodata",
+  "owner": {
+    "name": "Stratodata",
+    "email": "martin@stratodata.eu",
+    "url": "https://github.com/Stratodata"
+  },
+  "description": "Stratodata analytics skills for Claude — evidence-grounded RAS / BigQuery data analysis and reporting.",
+  "plugins": [
+    {
+      "name": "ras",
+      "source": "./plugins/ras",
+      "description": "Evidence-grounded RAS / BigQuery analysis protocol and workflow: every number traced to a query, every claim labelled verified / inferred / unknown.",
+      "version": "1.0.0"
+    }
+  ]
+}

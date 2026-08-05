@@ -1,0 +1,13 @@
+{
+  "name": "ras",
+  "displayName": "RAS Analysis",
+  "version": "1.0.0",
+  "description": "Evidence-grounded answers when analysing RAS / BigQuery client data — every number traced to a query, every claim labelled verified / inferred / unknown.",
+  "author": {
+    "name": "Stratodata",
+    "url": "https://stratodata.eu"
+  },
+  "homepage": "https://stratodata.eu",
+  "license": "SEE LICENSE.md",
+  "keywords": ["ras", "bigquery", "analytics", "reporting", "ecommerce"]
+}

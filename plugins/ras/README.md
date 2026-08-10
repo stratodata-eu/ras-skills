@@ -8,6 +8,7 @@ traced to a query, every claim labelled, no guesses dressed up as facts.
 | Skill | Invoke as | What it does |
 |-------|-----------|--------------|
 | `ras-analysis` | `/ras:ras-analysis` | Evidence-grounded analysis protocol and step-by-step workflow for any RAS / BigQuery data question or client-facing deliverable. |
+| `ras-product-ads` | `/ras:ras-product-ads` | PLA vs PMAX spend-mix analysis — what share of Google Performance Max budget reaches product listings (Shopping/PLA) versus non-product inventory (Display/video). |
 
 Skills trigger automatically when Claude recognises a matching task (analysing data, building a
 report, explaining a metric change). You can also invoke one explicitly with its `/ras:<name>`

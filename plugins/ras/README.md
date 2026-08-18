@@ -9,6 +9,7 @@ traced to a query, every claim labelled, no guesses dressed up as facts.
 |-------|-----------|--------------|
 | `ras-analysis` | `/ras:ras-analysis` | Evidence-grounded analysis protocol and step-by-step workflow for any RAS / BigQuery data question or client-facing deliverable. |
 | `ras-oos-cost` | `/ras:ras-oos-cost` | Estimates monthly revenue lost to out-of-stock products, using a baseline daily order value from in-stock days only, applied to OOS days in the target month. |
+| `ras-skills-docs` | `/ras:ras-skills-docs` | Lists the plugin's available skills, what each does, its default scope/filters, and how to override them. |
 
 Skills trigger automatically when Claude recognises a matching task (analysing data, building a
 report, explaining a metric change). You can also invoke one explicitly with its `/ras:<name>`

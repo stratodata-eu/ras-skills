@@ -8,11 +8,22 @@ traced to a query, every claim labelled, no guesses dressed up as facts.
 | Skill | Invoke as | What it does |
 |-------|-----------|--------------|
 | `ras-analysis` | `/ras:ras-analysis` | Evidence-grounded analysis protocol and step-by-step workflow for any RAS / BigQuery data question or client-facing deliverable. |
-| `ras-product-ads` | `/ras:ras-product-ads` | PLA vs PMAX spend-mix analysis — what share of Google Performance Max budget reaches product listings (Shopping/PLA) versus non-product inventory (Display/video). |
+| `ras-oos-cost` | `/ras:ras-oos-cost` | Estimates monthly revenue lost to out-of-stock products, using a baseline daily order value from in-stock days only, applied to OOS days in the target month. |
 
 Skills trigger automatically when Claude recognises a matching task (analysing data, building a
 report, explaining a metric change). You can also invoke one explicitly with its `/ras:<name>`
 command.
+
+## Archived skills
+
+`archive/` holds skills that are no longer distributed to clients but are kept for reference. They
+live outside `skills/` so they are not auto-discovered or installed. Currently archived:
+
+| Skill | Why archived |
+|-------|--------------|
+| `ras-product-ads` | Withdrawn from distribution; kept for reference. |
+
+To restore one, move its folder back under `skills/` and bump `version`.
 
 ## Requirements
 

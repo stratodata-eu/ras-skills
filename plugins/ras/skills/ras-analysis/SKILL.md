@@ -42,6 +42,18 @@ simple: say what the data says, label how sure we are, and never dress up a gues
 6. **Cite sources.** End client-facing and data answers with what they're built on — tables/queries
    run, documents or emails read.
 
+## Default scope — channel and country
+
+Unless the prompt says otherwise:
+
+- **Channel defaults to `sales_channel = 'E-COM'`.** Only include other channels (B2B, wholesale,
+  etc.) if the user names them explicitly.
+- **No country filter by default.** Aggregate across all countries/markets. Only filter to, or
+  break out by, a specific country if the user names one explicitly.
+
+State the scope you applied in the answer (e.g. "Scope: E-COM, all countries — say so if you want
+B2B or a specific market included") so the user can tell what was excluded by default.
+
 ## Confidence tags — quick reference
 
 | Tag | Means | How to phrase |
@@ -83,8 +95,10 @@ writing SQL. Confirm each column's date basis, attribution scope and coverage fi
 semantics aren't documented, treat them as unknown and verify empirically before relying on them.
 
 ### Step 2 — Query for every number
-Write SQL for each figure you'll report. Filter on the partition column, name columns explicitly,
-exclude service items where relevant. Keep the query text. If a needed field doesn't exist, that's
+Write SQL for each figure you'll report. Apply the default scope (`sales_channel = 'E-COM'`, no
+country filter) unless the prompt named other channels or a specific country. Filter on the
+partition column, name columns explicitly, exclude service items where relevant. Keep the query
+text. If a needed field doesn't exist, that's
 an **unknown** — record it and note what would be required (e.g. add `session_source` to the model).
 
 ### Step 3 — Draft with confidence labels

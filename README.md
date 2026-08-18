@@ -10,7 +10,7 @@ The repository is private. You reach it because Stratodata invited your GitHub a
 
 | Plugin | Skills | Purpose |
 |--------|--------|---------|
-| `ras` | `ras-analysis`, `ras-product-ads` | Evidence-grounded analysis of RAS / BigQuery data — every number traced to a query, every claim labelled verified / inferred / unknown. Includes PLA vs PMAX spend-mix analysis. |
+| `ras` | `ras-analysis`, `ras-oos-cost` | Evidence-grounded analysis of RAS / BigQuery data — every number traced to a query, every claim labelled verified / inferred / unknown. Includes monthly out-of-stock revenue-loss estimation. |
 
 More plugins and skills are added over time. Updating the marketplace (below) pulls the latest.
 

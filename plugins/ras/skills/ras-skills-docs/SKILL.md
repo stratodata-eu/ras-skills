@@ -20,6 +20,7 @@ out. This skill only describes capabilities; it never touches data itself, so it
 |---|---|---|---|---|
 | `ras-analysis` | `/ras:ras-analysis` | Evidence-grounded analysis protocol and workflow for any RAS / BigQuery data question or client-facing deliverable — every number traced to a query, every claim labelled verified / inferred / unknown. | `sales_channel = 'E-COM'`; no country filter (all countries combined). | Name another channel (e.g. B2B) to include it; name a specific country to filter/break out by it. |
 | `ras-oos-cost` | `/ras:ras-oos-cost` | Estimates revenue lost to out-of-stock products, per calendar month — baseline daily order value from in-stock days only, applied to the days a product was actually out of stock. | Target period = last fully closed calendar month. Baseline window = trailing ~12 months of in-stock days (or full history if shorter). Inherits `ras-analysis`'s channel/country defaults. | Name a different month or date range (one loss figure is still produced per month); name specific EANs/products; name other channels or a country. |
+| `ras-oos-risk` | `/ras:ras-oos-risk` | Flags best-selling products at risk of an upcoming stockout — ranks by recent sales velocity (in-stock days only), compares to current stock, projects days of stock remaining. | Velocity window = trailing 30 days. Best-sellers = top 20 EANs by units sold. Reorder point = 14 days of stock remaining. Inherits `ras-analysis`'s channel/country defaults. | Name a different window, best-seller cut (e.g. top 50), or reorder point (e.g. "flag under 21 days"); name other channels or a country. |
 | `ras-skills-docs` | `/ras:ras-skills-docs` | This skill — lists what's available and how to use it. | — | — |
 
 All filters are just plain language in your prompt — there is no separate config or flag system.
@@ -32,6 +33,10 @@ Say what you want changed from the default and the skill applies it.
 - *"How much did stockouts cost us last month?"* → `ras-oos-cost`, default target month.
 - *"What was the OOS cost for March, just for these 3 EANs?"* → `ras-oos-cost`, month and product
   scope both overridden.
+- *"Which of our top sellers are about to run out of stock?"* → `ras-oos-risk`, default window/cut/
+  reorder point.
+- *"Same, but top 50 and flag anything under 21 days."* → `ras-oos-risk`, best-seller cut and reorder
+  point both overridden.
 - *"What can this plugin do?"* → this skill.
 
 ## Keeping this list current

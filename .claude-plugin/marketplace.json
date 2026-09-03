@@ -12,7 +12,7 @@
       "name": "ras",
       "source": "./plugins/ras",
       "description": "Evidence-grounded RAS / BigQuery analysis protocol and workflow: every number traced to a query, every claim labelled verified / inferred / unknown.",
-      "version": "1.2.0"
+      "version": "1.3.0"
     }
   ]
 }

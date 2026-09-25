@@ -10,7 +10,7 @@ The repository is private. You reach it because Stratodata invited your GitHub a
 
 | Plugin | Skills | Purpose |
 |--------|--------|---------|
-| `ras` | `ras-analysis`, `ras-oos-cost`, `ras-skills-docs` | Evidence-grounded analysis of RAS / BigQuery data — every number traced to a query, every claim labelled verified / inferred / unknown. Includes monthly out-of-stock revenue-loss estimation and a skill-discovery guide. |
+| `ras` | `ras-analysis`, `ras-oos-cost`, `ras-oos-risk`, `ras-scorecard`, `ras-skills-docs` | Evidence-grounded analysis of RAS / BigQuery data — every number traced to a query, every claim labelled verified / inferred / unknown. Includes out-of-stock cost/risk estimation, a recurring KPI scorecard artifact, and a skill-discovery guide. |
 
 More plugins and skills are added over time. Updating the marketplace (below) pulls the latest.
 

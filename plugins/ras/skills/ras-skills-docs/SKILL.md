@@ -21,6 +21,7 @@ out. This skill only describes capabilities; it never touches data itself, so it
 | `ras-analysis` | `/ras:ras-analysis` | Evidence-grounded analysis protocol and workflow for any RAS / BigQuery data question or client-facing deliverable — every number traced to a query, every claim labelled verified / inferred / unknown. | `sales_channel = 'E-COM'`; no country filter (all countries combined). | Name another channel (e.g. B2B) to include it; name a specific country to filter/break out by it. |
 | `ras-oos-cost` | `/ras:ras-oos-cost` | Estimates revenue lost to out-of-stock products, per calendar month — baseline daily order value from in-stock days only, applied to the days a product was actually out of stock. | Target period = last fully closed calendar month. Baseline window = trailing ~12 months of in-stock days (or full history if shorter). Inherits `ras-analysis`'s channel/country defaults. | Name a different month or date range (one loss figure is still produced per month); name specific EANs/products; name other channels or a country. |
 | `ras-oos-risk` | `/ras:ras-oos-risk` | Flags best-selling products at risk of an upcoming stockout — ranks by recent sales velocity (in-stock days only), compares to current stock, projects days of stock remaining. | Velocity window = trailing 30 days. Best-sellers = top 20 EANs by units sold. Reorder point = 14 days of stock remaining. Inherits `ras-analysis`'s channel/country defaults. | Name a different window, best-seller cut (e.g. top 50), or reorder point (e.g. "flag under 21 days"); name other channels or a country. |
+| `ras-scorecard` | `/ras:ras-scorecard` | Builds a client-facing scorecard artifact evaluating a defined set of goals/metrics against RAS data, then keeps it refreshed on a recurring cadence. Takes a prompt or an uploaded onepager as input. | Cadence = weekly (last fully closed week). Trend window = trailing 12 periods. Status bands: on track / at risk (within 10%) / off track / track-only. Inherits `ras-analysis`'s channel/country defaults. | Name a different cadence (daily/monthly/quarterly), trend window, or status bands per metric; supply your own targets/thresholds in the prompt or onepager. |
 | `ras-skills-docs` | `/ras:ras-skills-docs` | This skill — lists what's available and how to use it. | — | — |
 
 All filters are just plain language in your prompt — there is no separate config or flag system.
@@ -37,6 +38,8 @@ Say what you want changed from the default and the skill applies it.
   reorder point.
 - *"Same, but top 50 and flag anything under 21 days."* → `ras-oos-risk`, best-seller cut and reorder
   point both overridden.
+- *"Build us a weekly scorecard tracking net sales growth and repeat purchase rate against these
+  targets [onepager attached]."* → `ras-scorecard`, default weekly cadence.
 - *"What can this plugin do?"* → this skill.
 
 ## Keeping this list current
